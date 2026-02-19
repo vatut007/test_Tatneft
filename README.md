@@ -26,3 +26,10 @@ EOF
 ```bash
 docker-compose up -d
 ```
+
+Админка будет доступна по адрес: http://localhost/admin
+Api будет достпна по адрес: http://localhost/api
+
+Данные для входа в админку
+Имя пользователя: admin
+Пароль: securepassword123
