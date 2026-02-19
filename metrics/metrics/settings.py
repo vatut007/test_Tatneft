@@ -30,7 +30,24 @@ SECRET_KEY = 'django-insecure-k-9r2fnnomg(u@mh%$awm)@0$^!e3@g)2o3*(4fgh1#-=0xt^)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '0.0.0.0',
+    'web',
+    'web:8000',
+    '.localhost',
+    '.127.0.0.1',
+    '.web'
+]
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost',
+    'http://localhost:8000',
+    'http://127.0.0.1',
+    'http://127.0.0.1:8000',
+    'http://web',
+    'http://web:8000',
+]
 
 
 # Application definition
@@ -173,3 +190,9 @@ CELERY_BEAT_SCHEDULE = {
         'schedule': 120.0,  # Каждые 120 секунд (2 минуты)
     },
 }
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
